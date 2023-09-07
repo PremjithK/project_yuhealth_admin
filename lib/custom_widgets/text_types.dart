@@ -19,6 +19,7 @@ class MainHeading extends StatelessWidget {
       key: key,
       style: TextStyle(
         fontSize: fontSize,
+        fontFamily: 'PlusJakarta',
         fontVariations: const [FontVariation('wght', 900)],
         letterSpacing: -0.5,
         color: Theme.of(context).textTheme.displayLarge!.color,

@@ -4,7 +4,7 @@ const String fontFamily = 'PlusJakarta';
 const String altFontFamily = 'Inter';
 
 ThemeData lightTheme = ThemeData(
-  fontFamily: fontFamily,
+  fontFamily: altFontFamily,
   brightness: Brightness.light,
 
   //Text Theme
@@ -33,7 +33,7 @@ ThemeData lightTheme = ThemeData(
 
     outlineVariant: const Color.fromRGBO(19, 19, 22, 0.25),
     // Drop Shadow Color
-    shadow: const Color.fromRGBO(0, 0, 0, 0.25),
+    shadow: const Color.fromRGBO(0, 0, 0, 0.15),
     //Text
     tertiary: const Color.fromRGBO(68, 68, 75, 1),
   ),
@@ -65,7 +65,7 @@ ThemeData darkTheme = ThemeData(
 
     outlineVariant: const Color.fromRGBO(19, 19, 22, 0.25),
     // Drop Shadow Color
-    shadow: const Color.fromRGBO(0, 0, 0, 0.25),
+    shadow: const Color.fromRGBO(255, 255, 255, 0.15),
     //Text
     tertiary: const Color.fromRGBO(68, 68, 75, 1),
   ),

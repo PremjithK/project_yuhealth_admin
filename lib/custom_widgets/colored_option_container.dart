@@ -33,22 +33,22 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
   Widget build(BuildContext context) {
     return ListTile(
       titleAlignment: ListTileTitleAlignment.center,
-      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
       onTap: widget.onTap,
       tileColor: widget.color,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15),
       ),
       leading: CircleAvatar(
-        backgroundColor: Color.fromRGBO(0, 0, 0, 0.1),
+        backgroundColor: const Color.fromRGBO(0, 0, 0, 0.1),
         radius: 30,
         foregroundColor: Colors.white,
         child: widget.icon,
       ),
       title: Text(
         widget.title,
-        style: TextStyle(
-          fontSize: 16,
+        style: const TextStyle(
+          fontSize: 18,
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
@@ -56,49 +56,14 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
       subtitle: Text(
         widget.subTitle,
         style: TextStyle(
-          fontVariations: [
-            FontVariation('wght', 400),
+          fontVariations: const [
+            FontVariation('wght', 500),
           ],
-          fontSize: 13,
-          color: Colors.white.withOpacity(0.8),
+          fontSize: 14,
+          color: Colors.white.withOpacity(0.7),
         ),
+        maxLines: 2,
       ),
     );
-    // Container(
-    //   width: widget.width,
-    //   padding: EdgeInsets.all(20),
-    //   decoration: BoxDecoration(
-    //     borderRadius: BorderRadius.circular(20),
-    //     color: widget.color,
-    //   ),
-    //   child: Row(
-    //     crossAxisAlignment: CrossAxisAlignment.start,
-    //     children: [
-    //       CircleAvatar(
-    //         backgroundColor: Color.fromRGBO(255, 255, 255, 0.25),
-    //         radius: 25,
-    //         child: widget.icon,
-    //       ),
-    //       widthspace(20),
-    //       Column(
-    //         crossAxisAlignment: CrossAxisAlignment.start,
-    //         children: [
-    //           Text(
-    //             widget.title,
-    //             style: TextStyle(
-    //                 fontWeight: FontWeight.bold, color: widget.textColor),
-    //           ),
-    //           Text(
-    //             widget.subTitle,
-    //             style: TextStyle(
-    //                 fontSize: 25,
-    //                 color: widget.textColor,
-    //                 fontVariations: [FontVariation('wght', 300)]),
-    //           ),
-    //         ],
-    //       )
-    //     ],
-    //   ),
-    // );
   }
 }

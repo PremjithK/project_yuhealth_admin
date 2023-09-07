@@ -33,6 +33,7 @@ class BoldElevatedButtonWithIcon extends StatelessWidget {
         style: TextStyle(
           color: Colors.white,
           fontSize: textSize,
+          fontFamily: 'PlusJakarta',
           fontVariations: [FontVariation('wght', 900)],
         ),
       ),
@@ -70,6 +71,7 @@ class BoldElevatedButton extends StatelessWidget {
         style: TextStyle(
             color: Colors.white,
             fontSize: textSize,
+            fontFamily: 'PlusJakarta',
             fontVariations: [FontVariation('wght', 900)]),
       ),
     );

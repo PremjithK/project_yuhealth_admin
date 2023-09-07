@@ -80,6 +80,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
           hintText: widget.hint,
           hintStyle: const TextStyle(
             fontSize: fontSize,
+            fontFamily: 'PlusJakarta',
             fontVariations: [FontVariation('wght', 500)],
           ),
 

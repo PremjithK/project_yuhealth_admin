@@ -25,58 +25,56 @@ class DashboardPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                children: [
-                  const MainHeading(text: 'Manage Yu'),
-                  heightspace(20),
-                  ColoredOptionContainer(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ManageDoctorsPage(),
-                          ));
-                    },
-                    title: 'Approve Doctors',
-                    subTitle: 'Accept Or Reject Doctors',
-                    color: Colors.teal.shade600,
-                    icon: Icon(
-                      Icons.medical_information,
-                      size: 25,
+              Center(
+                child: Column(
+                  children: [
+                    const MainHeading(text: 'Manage Yu'),
+                    heightspace(20),
+                    ColoredOptionContainer(
+                      color: Colors.teal,
+                      title: 'Approve Doctors',
+                      subTitle:
+                          'Accept or Reject doctors enlisting to YuHealth',
+                      icon: Icon(Icons.medical_services),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ApproveDoctorsPage(),
+                            ));
+                      },
                     ),
-                  ),
-
-                  // REVOKE DOCTORS
-                  heightspace(10),
-                  ColoredOptionContainer(
-                    color: Colors.red,
-                    title: 'Remove Doctors',
-                    subTitle: 'Revoke permits of currently active doctors.',
-                    icon: Icon(
-                      Icons.cancel,
-                      size: 30,
+                    heightspace(10),
+                    ColoredOptionContainer(
+                      color: Colors.pink,
+                      title: 'Remove Doctors',
+                      subTitle: 'Remove Doctors Actively Working With YuHealth',
+                      icon: Icon(Icons.close),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ApproveDoctorsPage(),
+                            ));
+                      },
                     ),
-                    onTap: () {},
-                  ),
-                  // FEEDBACK OPTION
-                  heightspace(10),
-                  ColoredOptionContainer(
-                    title: 'View Feedback',
-                    subTitle: 'Feedback and Complaints From Users',
-                    icon: Icon(
-                      Icons.message_outlined,
-                      size: 25,
+                    heightspace(10),
+                    ColoredOptionContainer(
+                      color: Colors.blue.shade500,
+                      title: 'View Feedback',
+                      subTitle: 'Read Feedback From Yu Customers',
+                      icon: Icon(Icons.message_outlined),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ViewFeedbackPage(),
+                            ));
+                      },
                     ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ViewFeedbackPage(),
-                          ));
-                    },
-                  ),
-                  heightspace(10),
-                ],
+                    heightspace(10),
+                  ],
+                ),
               ),
               //
             ],

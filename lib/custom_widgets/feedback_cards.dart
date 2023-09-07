@@ -20,6 +20,12 @@ class FeedbackCard extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 7,
+            color: Theme.of(context).colorScheme.shadow,
+          ),
+        ],
         color: Theme.of(context).colorScheme.onBackground,
         borderRadius: BorderRadius.circular(15),
       ),
@@ -29,9 +35,9 @@ class FeedbackCard extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
-              fontSize: 20,
-              fontVariations: [FontVariation('wght', 900)],
+            style: const TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold,
+              // fontVariations: [FontVariation('wght', 800)],
             ),
           ),
           Text(
@@ -44,7 +50,11 @@ class FeedbackCard extends StatelessWidget {
           Text(
             content,
             maxLines: 5,
-            style: TextStyle(fontFamily: 'Inter', fontSize: 16),
+            style: TextStyle(
+              fontFamily: 'Inter',
+              fontSize: 16,
+              letterSpacing: -0.2,
+            ),
           ),
         ],
       ),

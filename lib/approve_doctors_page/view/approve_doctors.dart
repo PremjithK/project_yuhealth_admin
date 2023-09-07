@@ -4,8 +4,8 @@ import 'package:yu_health_admin/custom_widgets/doctor_approval_tile.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_types.dart';
 
-class ManageDoctorsPage extends StatelessWidget {
-  ManageDoctorsPage({super.key});
+class ApproveDoctorsPage extends StatelessWidget {
+  ApproveDoctorsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,14 +30,24 @@ class ManageDoctorsPage extends StatelessWidget {
               heightspace(20),
               Text('Swipe Left or Right For Options'),
               heightspace(10),
-              DoctorApprovalTile(
-                name: 'Dr. Chen',
-                qualification: 'MBBS, MD',
-                department: 'ORTHOPAEDIC',
-                onAccepted: (context) {
-                  print("ACCEPTED!");
-                },
-              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal:20),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Column(
+                    children: [
+                      DoctorApprovalTile(
+                        name: 'Dr. Chen',
+                        qualification: 'MBBS, MD',
+                        department: 'ORTHOPAEDIC',
+                        onAccepted: (context) {
+                          print("ACCEPTED!");
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
