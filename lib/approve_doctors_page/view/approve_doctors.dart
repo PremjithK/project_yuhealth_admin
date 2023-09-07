@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:yu_health_admin/custom_widgets/bold_elevated_buttons.dart';
 import 'package:yu_health_admin/custom_widgets/doctor_approval_tile.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_types.dart';
@@ -32,58 +33,27 @@ class ManageDoctorsPage extends StatelessWidget {
                 name: 'Dr. Chen',
                 qualification: 'MBBS, MD',
                 department: 'ORTHOPAEDIC',
-              ),
-              DoctorApprovalTile(
-                name: 'Dr. Chen',
-                qualification: 'MBBS, MD',
-                department: 'ORTHOPAEDIC',
+                onAccepted: (context) {
+                  print("ACCEPTED!");
+                },
               ),
             ],
           ),
         ),
-      )
-
-      // SingleChildScrollView(
-      //   child: SizedBox(
-      //     width: deviceWidth,
-      //     // height: deviceHeight,
-      //     child: Padding(
-      //       padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
-      //       child: Column(
-      //         children: [
-      //           const MainHeading(
-      //             text: 'Approval Requests',
-      //             fontSize: 30,
-      //           ),
-      //           heightspace(20),
-      //           DoctorApprovalCard(
-      //             name: 'Doctor Name',
-      //             qualification: 'MBBS',
-      //             icon: Icon(Icons.person),
-      //           ),
-      //           heightspace(20),
-      //         ],
-      //       ),
-      //     ),
-      //   ),
-      // ),
-
-      //Bottom Navbar
-      ,
-      bottomNavigationBar: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            child: IconButton(
-              iconSize: 30,
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+        child: Row(
+          children: [
+            BoldElevatedButtonWithIcon(
+              label: 'Back',
+              icon: Icon(Icons.arrow_back_ios),
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.arrow_back),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yu_health_admin/custom_widgets/bottom_navigation_button.dart';
+import 'package:yu_health_admin/custom_widgets/bold_elevated_buttons.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_types.dart';
 
@@ -24,9 +24,11 @@ class ViewFeedbackPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MainHeading(
-                  text: 'Feedback',
-                  fontSize: 30,
+                const Center(
+                  child:  MainHeading(
+                    text: 'Feedback',
+                    fontSize: 30,
+                  ),
                 ),
                 heightspace(20),
               ],
@@ -38,7 +40,7 @@ class ViewFeedbackPage extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Row(
           children: [
-            BottomNavigationButton(
+            BoldElevatedButtonWithIcon(
               label: 'Back',
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () {

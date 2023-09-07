@@ -19,6 +19,7 @@ class DoctorApprovalTile extends StatefulWidget {
   });
 
   //Config
+
   final String name;
   final String qualification;
   final String department;
@@ -28,9 +29,9 @@ class DoctorApprovalTile extends StatefulWidget {
   final Color color;
 
   // final String photoURL;
-  final void Function()? onAccepted;
-  final void Function()? onRejected;
-  final void Function()? onDetails;
+  final void Function(BuildContext)? onAccepted;
+  final void Function(BuildContext)? onRejected;
+  final void Function(BuildContext)? onDetails;
 
   //Styles
   double contentRadius = 15;
@@ -44,6 +45,7 @@ class _DoctorApprovalTileState extends State<DoctorApprovalTile> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 5),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.onBackground,
       ),
@@ -54,14 +56,14 @@ class _DoctorApprovalTileState extends State<DoctorApprovalTile> {
             SlidableAction(
               icon: Icons.check,
               label: 'Accept',
-              backgroundColor: Colors.green,
-              onPressed: (context) => widget.onAccepted,
+              backgroundColor: Colors.teal,
+              onPressed: widget.onAccepted,
             ),
             SlidableAction(
                 icon: Icons.close,
                 label: 'Reject',
                 backgroundColor: Colors.red,
-                onPressed: (context) => widget.onRejected),
+                onPressed: widget.onRejected),
           ],
         ),
         endActionPane: ActionPane(motion: DrawerMotion(), children: [
@@ -69,18 +71,20 @@ class _DoctorApprovalTileState extends State<DoctorApprovalTile> {
             icon: Icons.info_outline,
             backgroundColor: Colors.blue,
             label: 'More Info',
-            onPressed: (context) => widget.onDetails,
+            onPressed: widget.onDetails,
           ),
         ]),
         child: ListTile(
+          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
           leading: ClipRRect(
-            borderRadius: BorderRadius.circular(widget.contentRadius),
+            borderRadius: BorderRadius.circular(widget.contentRadius / 2),
             child: Image.network(
               'https://img.freepik.com/premium-photo/covid-19-coronavirus-outbreak-healthcare-workers-pandemic-concept-middle-aged-doctor-white-coat-cross-arms-chest-ready-help-patients-prescribe-medication-smiling-cheerful_1258-61179.jpg',
-              fit: BoxFit.contain,
+              fit: BoxFit.cover,
+              width: 100,
             ),
           ),
           // CircleAvatar(

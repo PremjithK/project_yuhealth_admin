@@ -32,7 +32,8 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      titleAlignment: ListTileTitleAlignment.center,
+      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       onTap: widget.onTap,
       tileColor: widget.color,
       shape: RoundedRectangleBorder(
