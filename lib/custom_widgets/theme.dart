@@ -23,13 +23,13 @@ ThemeData lightTheme = ThemeData(
     background: const Color.fromRGBO(244, 244, 245, 1),
     onBackground: Colors.white,
 
-    primary: const Color.fromRGBO(50, 104, 226, 1),
+    primary: Color.fromARGB(255, 226, 50, 73),
     inversePrimary: Colors.white,
 
     secondary: Colors.grey.shade200,
 
     //Lines
-    outline: const Color.fromRGBO(50, 104, 226, 1),
+    outline: const Color.fromARGB(255, 226, 50, 73),
 
     outlineVariant: const Color.fromRGBO(19, 19, 22, 0.25),
     // Drop Shadow Color
@@ -58,10 +58,10 @@ ThemeData darkTheme = ThemeData(
     onBackground: Colors.grey.shade900,
 
     // Main Colors
-    primary: const Color.fromRGBO(50, 104, 226, 1),
+    primary: const Color.fromARGB(255, 181, 40, 59),
     secondary: Colors.grey.shade200,
     //Lines
-    outline: const Color.fromRGBO(50, 104, 226, 1),
+    outline: const Color.fromARGB(255, 181, 40, 59),
 
     outlineVariant: const Color.fromRGBO(19, 19, 22, 0.25),
     // Drop Shadow Color

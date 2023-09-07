@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:yu_health_admin/custom_widgets/bold_elevated_buttons.dart';
 import 'package:yu_health_admin/custom_widgets/doctor_approval_tile.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
@@ -19,16 +18,18 @@ class ManageDoctorsPage extends StatelessWidget {
       backgroundColor: theme.background,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 60),
+          padding: const EdgeInsets.symmetric(
+            vertical: 60,
+          ),
           child: Column(
             children: [
-              Center(
-                child: MainHeading(
-                  text: 'Approve Doctors',
-                  fontSize: 30,
-                ),
+              MainHeading(
+                text: 'Approve Doctors',
+                fontSize: 30,
               ),
               heightspace(20),
+              Text('Swipe Left or Right For Options'),
+              heightspace(10),
               DoctorApprovalTile(
                 name: 'Dr. Chen',
                 qualification: 'MBBS, MD',
@@ -41,18 +42,21 @@ class ManageDoctorsPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-        child: Row(
-          children: [
-            BoldElevatedButtonWithIcon(
-              label: 'Back',
-              icon: Icon(Icons.arrow_back_ios),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+      bottomNavigationBar: BottomAppBar(
+        elevation: 0,
+        color: Colors.transparent,
+        shadowColor: Colors.transparent,
+        padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
+        child: SizedBox(
+          width: double.infinity,
+          child: BoldElevatedButtonWithIcon(
+            onPressed: () => {Navigator.pop(context)},
+            label: 'Back',
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
             ),
-          ],
+          ),
         ),
       ),
     );

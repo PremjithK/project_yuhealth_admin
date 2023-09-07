@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 // Common features
 String font = 'PlusJakarta';
-double fontSize = 15;
-double buttonPadding = 15;
+double fontSize = 18;
+double buttonPadding = 12;
 double elev = 0;
 double borderWidth = 1;
 //

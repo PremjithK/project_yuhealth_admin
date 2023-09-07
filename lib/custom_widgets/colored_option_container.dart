@@ -48,7 +48,7 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
       title: Text(
         widget.title,
         style: TextStyle(
-          fontSize: 20,
+          fontSize: 16,
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
@@ -57,9 +57,9 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
         widget.subTitle,
         style: TextStyle(
           fontVariations: [
-            FontVariation('wght', 300),
+            FontVariation('wght', 400),
           ],
-          fontSize: 16,
+          fontSize: 13,
           color: Colors.white.withOpacity(0.8),
         ),
       ),

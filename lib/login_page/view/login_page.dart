@@ -3,6 +3,7 @@ import 'package:yu_health_admin/custom_widgets/buttons.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_fields.dart';
 import 'package:yu_health_admin/custom_widgets/text_types.dart';
+import 'package:yu_health_admin/dashboard_page/view/dashboard_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -66,7 +67,14 @@ class LoginPage extends StatelessWidget {
                         MyPrimaryButton(
                           label: 'Log In',
                           onPressed: () {
-                            if (_formKey.currentState!.validate()) {}
+                            if (_formKey.currentState!.validate()) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DashboardPage(),
+                                ),
+                              );
+                            }
                           },
                         ),
                       ],

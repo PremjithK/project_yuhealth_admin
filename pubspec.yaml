@@ -36,3 +36,12 @@ flutter:
       - asset: assets/fonts/PlusJakarta.ttf
       - asset: assets/fonts/PlusJakartaItalic.ttf
         style: italic
+  
+  - family: Instrument
+    fonts:
+      - asset: assets/fonts/Instrument.ttf
+      - asset: assets/fonts/InstrumentItalic.ttf
+        style: italic
+  - family: Inter
+    fonts:
+      - asset: assets/fonts/Inter.ttf

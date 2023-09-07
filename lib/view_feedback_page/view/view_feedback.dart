@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yu_health_admin/custom_widgets/bold_elevated_buttons.dart';
+import 'package:yu_health_admin/custom_widgets/feedback_cards.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_types.dart';
 
@@ -16,38 +17,40 @@ class ViewFeedbackPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: theme.background,
       body: SingleChildScrollView(
-        child: SizedBox(
-          width: deviceWidth,
-          // height: deviceHeight,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Center(
-                  child:  MainHeading(
-                    text: 'Feedback',
-                    fontSize: 30,
-                  ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
+          child: Column(
+            children: [
+              const Center(
+                child: MainHeading(
+                  text: 'User feedback',
+                  fontSize: 30,
                 ),
-                heightspace(20),
-              ],
-            ),
+              ),
+              heightspace(20),
+              FeedbackCard(
+                title: 'Example Title',
+                username: 'Michael',
+                content: 'Content 1233556357858',
+              ),
+            ],
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Row(
-          children: [
-            BoldElevatedButtonWithIcon(
-              label: 'Back',
-              icon: Icon(Icons.arrow_back_ios),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            )
-          ],
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.transparent,
+        shadowColor: Colors.transparent,
+        padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
+        child: SizedBox(
+          width: double.infinity,
+          child: BoldElevatedButtonWithIcon(
+            onPressed: () => {Navigator.pop(context)},
+            label: 'Back',
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+          ),
         ),
       ),
     );
