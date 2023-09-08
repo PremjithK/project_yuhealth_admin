@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:yu_health_admin/custom_widgets/bold_elevated_buttons.dart';
 import 'package:yu_health_admin/custom_widgets/doctor_remove_tile.dart';
-import 'package:yu_health_admin/custom_widgets/feedback_cards.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_types.dart';
 
 class RemoveDoctorsPage extends StatelessWidget {
-  RemoveDoctorsPage({super.key});
+  const RemoveDoctorsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).colorScheme;
     //final deviceHeight = MediaQuery.of(context).size.height;
-    final deviceWidth = MediaQuery.of(context).size.width;
+    //final deviceWidth = MediaQuery.of(context).size.width;
 
     // UI
     return Scaffold(

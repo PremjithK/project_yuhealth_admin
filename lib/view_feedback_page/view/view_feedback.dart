@@ -28,7 +28,7 @@ class ViewFeedbackPage extends StatelessWidget {
                 ),
               ),
               heightspace(20),
-              FeedbackCard(
+              const FeedbackCard(
                 title: 'Example Title',
                 username: 'Michael',
                 content: 'Content 1233556357858',
@@ -46,7 +46,7 @@ class ViewFeedbackPage extends StatelessWidget {
           child: BoldElevatedButtonWithIcon(
             onPressed: () => {Navigator.pop(context)},
             label: 'Back',
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.white,
             ),
