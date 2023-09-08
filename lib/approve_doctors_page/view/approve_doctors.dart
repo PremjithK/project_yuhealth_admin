@@ -31,15 +31,18 @@ class ApproveDoctorsPage extends StatelessWidget {
               Text('Swipe Left or Right For Options'),
               heightspace(10),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal:20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Column(
                     children: [
                       DoctorApprovalTile(
-                        name: 'Dr. Chen',
+                        name: 'Dr. RAJESH MK',
                         qualification: 'MBBS, MD',
                         department: 'ORTHOPAEDIC',
+                        clinic: 'ASTER MIMS',
+                        imageURL:
+                            'https://img.freepik.com/premium-photo/covid-19-coronavirus-outbreak-healthcare-workers-pandemic-concept-middle-aged-doctor-white-coat-cross-arms-chest-ready-help-patients-prescribe-medication-smiling-cheerful_1258-61179.jpg',
                         onAccepted: (context) {
                           print("ACCEPTED!");
                         },

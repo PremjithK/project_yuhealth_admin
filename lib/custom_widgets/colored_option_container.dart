@@ -33,7 +33,7 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
   Widget build(BuildContext context) {
     return ListTile(
       titleAlignment: ListTileTitleAlignment.center,
-      contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
       onTap: widget.onTap,
       tileColor: widget.color,
       shape: RoundedRectangleBorder(
@@ -41,14 +41,14 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
       ),
       leading: CircleAvatar(
         backgroundColor: const Color.fromRGBO(0, 0, 0, 0.1),
-        radius: 30,
+        radius: 25,
         foregroundColor: Colors.white,
         child: widget.icon,
       ),
       title: Text(
         widget.title,
         style: const TextStyle(
-          fontSize: 18,
+          fontSize: 16,
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
@@ -56,11 +56,12 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
       subtitle: Text(
         widget.subTitle,
         style: TextStyle(
+          fontFamily: 'Inter',
           fontVariations: const [
             FontVariation('wght', 500),
           ],
-          fontSize: 14,
-          color: Colors.white.withOpacity(0.7),
+          fontSize: 12,
+          color: Colors.white.withOpacity(0.6),
         ),
         maxLines: 2,
       ),

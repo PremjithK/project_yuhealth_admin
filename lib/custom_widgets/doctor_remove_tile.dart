@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 
-class DoctorApprovalTile extends StatefulWidget {
-  DoctorApprovalTile({
+class DoctorRemovalTile extends StatefulWidget {
+  DoctorRemovalTile({
     required this.name,
     required this.qualification,
     required this.department,
@@ -14,9 +14,7 @@ class DoctorApprovalTile extends StatefulWidget {
     this.color = Colors.cyan,
     this.textColor = Colors.white,
     // Methods
-    this.onAccepted,
-    this.onRejected,
-    this.onDetails,
+    this.onRemoved,
     super.key,
   });
 
@@ -30,21 +28,17 @@ class DoctorApprovalTile extends StatefulWidget {
   final double? height;
   final Color textColor;
   final Color color;
-
-  // final String photoURL;
-  final void Function(BuildContext)? onAccepted;
-  final void Function(BuildContext)? onRejected;
-  final void Function(BuildContext)? onDetails;
+  final void Function(BuildContext)? onRemoved;
 
   //Styles
   double contentRadius = 15;
 
   //
   @override
-  State<DoctorApprovalTile> createState() => _DoctorApprovalTileState();
+  State<DoctorRemovalTile> createState() => _DoctorRemovalTileState();
 }
 
-class _DoctorApprovalTileState extends State<DoctorApprovalTile> {
+class _DoctorRemovalTileState extends State<DoctorRemovalTile> {
   @override
   Widget build(BuildContext context) {
     return Slidable(
@@ -52,24 +46,10 @@ class _DoctorApprovalTileState extends State<DoctorApprovalTile> {
         motion: const DrawerMotion(),
         children: [
           SlidableAction(
-            icon: Icons.check,
-            backgroundColor: Colors.teal,
-            onPressed: widget.onAccepted,
-          ),
-          SlidableAction(
-              icon: Icons.close,
-              backgroundColor: Colors.red,
-              onPressed: widget.onRejected),
-        ],
-      ),
-      startActionPane: ActionPane(
-        motion: const DrawerMotion(),
-        children: [
-          SlidableAction(
-            icon: Icons.text_snippet_rounded,
-            backgroundColor: Colors.blue,
-            label: 'CREDENTIALS',
-            onPressed: widget.onDetails,
+            icon: Icons.close,
+            label: 'REMOVE',
+            backgroundColor: Colors.red,
+            onPressed: widget.onRemoved,
           ),
         ],
       ),
@@ -84,7 +64,7 @@ class _DoctorApprovalTileState extends State<DoctorApprovalTile> {
               height: 100,
               fit: BoxFit.cover,
             ),
-            widthspace(20),
+            widthspace(10),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,

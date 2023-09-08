@@ -4,6 +4,7 @@ import 'package:yu_health_admin/custom_widgets/bold_elevated_buttons.dart';
 import 'package:yu_health_admin/custom_widgets/colored_option_container.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_types.dart';
+import 'package:yu_health_admin/remove_doctors_page/view/remove_doctors.dart';
 import 'package:yu_health_admin/view_feedback_page/view_feedback.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -54,7 +55,7 @@ class DashboardPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ApproveDoctorsPage(),
+                              builder: (context) => RemoveDoctorsPage(),
                             ));
                       },
                     ),
