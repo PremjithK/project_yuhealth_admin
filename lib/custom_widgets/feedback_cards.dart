@@ -23,14 +23,15 @@ class FeedbackCard extends StatelessWidget {
         color: Theme.of(context).colorScheme.onBackground,
         borderRadius: BorderRadius.circular(15),
       ),
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             title,
             style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold,
+              fontFamily: 'Inter',
+              fontSize: 16, fontWeight: FontWeight.bold,
               letterSpacing: 1,
               // fontVariations: [FontVariation('wght', 800)],
             ),
@@ -47,7 +48,7 @@ class FeedbackCard extends StatelessWidget {
             maxLines: 5,
             style: TextStyle(
               fontFamily: 'Inter',
-              fontSize: 16,
+              fontSize: 14,
               letterSpacing: -0.2,
             ),
           ),

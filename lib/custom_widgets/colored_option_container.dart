@@ -48,7 +48,8 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
       title: Text(
         widget.title,
         style: const TextStyle(
-          fontSize: 16,
+          fontSize: 15,
+          fontFamily: 'Inter',
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
@@ -61,9 +62,8 @@ class _ColoredOptionContainerState extends State<ColoredOptionContainer> {
             FontVariation('wght', 500),
           ],
           fontSize: 12,
-          color: Colors.white.withOpacity(0.6),
+          color: Colors.white.withOpacity(0.5),
         ),
-        maxLines: 2,
       ),
     );
   }
