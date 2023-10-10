@@ -49,9 +49,9 @@ class DashboardPage extends StatelessWidget {
                       title: 'Remove Doctors',
                       subTitle: 'Remove Doctors Actively Working With YuHealth',
                       icon: const Icon(Icons.close),
-                      onTap: () {
-                        Get.to<Widget>(RemoveDoctorsPage());
-                      },
+                      onTap: () => Get.to(
+                        RemoveDoctorsPage(),
+                      ),
                     ),
                     heightspace(10),
                     ColoredOptionContainer(

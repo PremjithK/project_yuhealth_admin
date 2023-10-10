@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class ColoredOptionContainer extends StatefulWidget {
-  ColoredOptionContainer({
+  const ColoredOptionContainer({
     required this.title,
     required this.subTitle,
     required this.icon,

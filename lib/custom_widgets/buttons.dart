@@ -30,12 +30,9 @@ class MyTextButton extends StatelessWidget {
       key: key,
       onPressed: onPressed,
       style: ButtonStyle(
-        padding: const MaterialStatePropertyAll(
-            EdgeInsets.symmetric(horizontal: 20)),
-        overlayColor:
-            MaterialStatePropertyAll(Theme.of(context).colorScheme.tertiary),
-        foregroundColor:
-            MaterialStatePropertyAll(Theme.of(context).colorScheme.outline),
+        padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: 20)),
+        overlayColor: MaterialStatePropertyAll(Theme.of(context).colorScheme.tertiary),
+        foregroundColor: MaterialStatePropertyAll(Theme.of(context).colorScheme.outline),
         shape: MaterialStatePropertyAll(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
@@ -44,7 +41,7 @@ class MyTextButton extends StatelessWidget {
         textStyle: MaterialStatePropertyAll(
           TextStyle(
             fontFamily: font,
-            fontVariations: [FontVariation('wght', 600)],
+            fontVariations: const [FontVariation('wght', 600)],
             fontSize: fontSize,
           ),
         ),
@@ -75,63 +72,16 @@ class MyPrimaryButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
-            textStyle: TextStyle(
-              fontFamily: font,
-              fontVariations: [FontVariation('wght', 900)],
-              fontSize: fontSize,
-            ),
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            padding: EdgeInsets.all(buttonPadding),
-            elevation: elev,
-            shape: RoundedRectangleBorder(
-                // side: BorderSide(
-                //   width: borderWidth,
-                //   color: Theme.of(context).colorScheme.outline,
-                // ),
-                borderRadius: BorderRadius.circular(mainBorderRadius))),
-        child: Text(label),
-      ),
-    );
-  }
-}
-
-class MySecondaryButton extends StatelessWidget {
-  const MySecondaryButton({
-    //Required
-    required this.label,
-    required this.onPressed,
-    // Optional
-    this.width = double.infinity,
-    super.key,
-  });
-
-  final String label;
-  final void Function()? onPressed;
-  final double? width;
-  // Customized Build Method
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: TextButton.styleFrom(
-          foregroundColor: Theme.of(context).colorScheme.outline,
+          foregroundColor: Colors.white,
           textStyle: TextStyle(
             fontFamily: font,
-            fontVariations: [FontVariation('wght', 900)],
+            fontVariations: const [FontVariation('wght', 900)],
             fontSize: fontSize,
           ),
-          backgroundColor: Theme.of(context).colorScheme.onBackground,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           padding: EdgeInsets.all(buttonPadding),
           elevation: elev,
-          shape: RoundedRectangleBorder(
-              side: BorderSide(
-                width: borderWidth,
-                color: Theme.of(context).colorScheme.outline,
-              ),
-              borderRadius: BorderRadius.circular(mainBorderRadius)),
+          shape: const StadiumBorder(),
         ),
         child: Text(label),
       ),

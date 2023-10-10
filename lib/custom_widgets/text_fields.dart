@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 
 const double fontSize = 15;
-const double borderRadius = 15;
+const double borderRadius = 60;
 const double formTextFieldPadding = 16;
 
 class MyTextFormField extends StatefulWidget {
@@ -48,49 +48,48 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
       onChanged: (value) => widget.onChanged,
 
       // INPUT TEXT STYLE
-      style: TextStyle(
+      style: const TextStyle(
         fontSize: fontSize,
       ),
       //Decoration
       decoration: InputDecoration(
+        //ERROR MESSAGE STYLE
+        errorStyle: const TextStyle(
+          color: Color.fromRGBO(211, 54, 83, 1),
+          fontSize: 12,
+        ),
+        filled: true,
+        fillColor: Theme.of(context).colorScheme.onBackground,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+          borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.outlineVariant,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+          borderSide: BorderSide(
+            color: Theme.of(context).colorScheme.outline,
+          ),
+        ),
+        // HINT STYLES
+        hintText: widget.hint,
+        hintStyle: const TextStyle(
+          fontSize: fontSize,
+          fontFamily: 'PlusJakarta',
+          fontVariations: [FontVariation('wght', 500)],
+        ),
 
-          //ERROR MESSAGE STYLE
-          errorStyle: TextStyle(
-            color: Color.fromRGBO(211, 54, 83, 1),
-            fontSize: 13,
-          ),
-          filled: true,
-          fillColor: Theme.of(context).colorScheme.onBackground,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(borderRadius),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(borderRadius),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.outlineVariant,
-            ),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(borderRadius),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.outline,
-            ),
-          ),
-          // HINT STYLES
-          hintText: widget.hint,
-          hintStyle: const TextStyle(
-            fontSize: fontSize,
-            fontFamily: 'PlusJakarta',
-            fontVariations: [FontVariation('wght', 500)],
-          ),
+        // PREFIX_ICON STYLE
 
-          // PREFIX_ICON STYLE
-          prefixIcon: (widget.prefixIcon != null)
-              ? widthspace(60, widget.prefixIcon)
-              : widthspace(0),
-          prefix: (widget.prefixIcon != null) ? widthspace(0) : widthspace(20),
-          suffix: widthspace(20),
-          contentPadding: const EdgeInsets.all(formTextFieldPadding)),
+        prefixIcon: (widget.prefixIcon != null) ? widthspace(60, widget.prefixIcon) : widthspace(0),
+        prefix: (widget.prefixIcon != null) ? widthspace(0) : widthspace(10),
+        suffix: widthspace(20),
+        contentPadding: const EdgeInsets.all(formTextFieldPadding),
+      ),
     );
   }
 }
