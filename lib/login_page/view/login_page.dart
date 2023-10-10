@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:yu_health_admin/custom_widgets/buttons.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 import 'package:yu_health_admin/custom_widgets/text_fields.dart';
@@ -68,12 +69,7 @@ class LoginPage extends StatelessWidget {
                           label: 'Log In',
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => DashboardPage(),
-                                ),
-                              );
+                              Get.to<Widget>(DashboardPage());
                             }
                           },
                         ),

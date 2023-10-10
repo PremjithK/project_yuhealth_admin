@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yu_health_admin/custom_widgets/bold_elevated_buttons.dart';
 import 'package:yu_health_admin/custom_widgets/feedback_cards.dart';
-import 'package:yu_health_admin/custom_widgets/spacing.dart';
-import 'package:yu_health_admin/custom_widgets/text_types.dart';
 
 class ViewFeedbackPage extends StatelessWidget {
   const ViewFeedbackPage({super.key});

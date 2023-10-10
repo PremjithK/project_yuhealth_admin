@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yu_health_admin/custom_widgets/doctor_remove_tile.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
-import 'package:yu_health_admin/custom_widgets/text_types.dart';
 
 class RemoveDoctorsPage extends StatelessWidget {
   const RemoveDoctorsPage({super.key});

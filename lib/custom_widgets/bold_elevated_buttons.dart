@@ -21,12 +21,12 @@ class BoldElevatedButtonWithIcon extends StatelessWidget {
     //
     return ElevatedButton.icon(
       style: ElevatedButton.styleFrom(
-          alignment: Alignment.center,
-          elevation: 0,
-          shadowColor: Colors.transparent,
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius))),
+        alignment: Alignment.center,
+        elevation: 0,
+        shadowColor: Colors.transparent,
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
+        shape: const StadiumBorder(),
+      ),
       onPressed: onPressed,
       label: Text(
         label,
@@ -34,7 +34,7 @@ class BoldElevatedButtonWithIcon extends StatelessWidget {
           color: Colors.white,
           fontSize: textSize,
           fontFamily: 'PlusJakarta',
-          fontVariations: [FontVariation('wght', 900)],
+          fontVariations: const [FontVariation('wght', 800)],
         ),
       ),
       icon: icon,
@@ -60,11 +60,11 @@ class BoldElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          elevation: 0,
-          shadowColor: Colors.transparent,
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius))),
+        elevation: 0,
+        shadowColor: Colors.transparent,
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
+        shape: const StadiumBorder(),
+      ),
       onPressed: onPressed,
       child: Text(
         label,
@@ -72,7 +72,7 @@ class BoldElevatedButton extends StatelessWidget {
             color: Colors.white,
             fontSize: textSize,
             fontFamily: 'PlusJakarta',
-            fontVariations: [FontVariation('wght', 900)]),
+            fontVariations: const [FontVariation('wght', 800)]),
       ),
     );
   }
