@@ -37,7 +37,7 @@ class DoctorApprovalTile extends StatefulWidget {
   final void Function(BuildContext)? onDetails;
 
   //Styles
-  double contentRadius = 15;
+  double contentRadius = 10;
 
   //
   @override
@@ -57,9 +57,7 @@ class _DoctorApprovalTileState extends State<DoctorApprovalTile> {
             onPressed: widget.onAccepted,
           ),
           SlidableAction(
-              icon: Icons.close,
-              backgroundColor: Colors.red,
-              onPressed: widget.onRejected),
+              icon: Icons.close, backgroundColor: Colors.red, onPressed: widget.onRejected),
         ],
       ),
       startActionPane: ActionPane(
