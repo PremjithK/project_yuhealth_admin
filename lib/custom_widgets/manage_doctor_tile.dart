@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:yu_health_admin/config/theme.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 
 class DoctorRemovalTile extends StatefulWidget {
@@ -43,8 +46,15 @@ class _DoctorRemovalTileState extends State<DoctorRemovalTile> {
   Widget build(BuildContext context) {
     return Slidable(
       endActionPane: ActionPane(
+        extentRatio: 0.75,
         motion: const DrawerMotion(),
         children: [
+          SlidableAction(
+            icon: Icons.pause,
+            label: 'FREEZE',
+            backgroundColor: Colors.blue,
+            onPressed: widget.onRemoved,
+          ),
           SlidableAction(
             icon: Icons.close,
             label: 'REMOVE',
@@ -54,8 +64,10 @@ class _DoctorRemovalTileState extends State<DoctorRemovalTile> {
         ],
       ),
       child: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.onBackground,
+        ),
         width: double.infinity,
-        color: Theme.of(context).colorScheme.onBackground,
         child: Row(
           children: [
             Image.network(
@@ -73,7 +85,8 @@ class _DoctorRemovalTileState extends State<DoctorRemovalTile> {
                   widget.name,
                   style: const TextStyle(
                     fontSize: 16,
-                    fontWeight: FontWeight.bold,
+                    fontFamily: fontFamily,
+                    fontVariations: [FontVariation('wght', 800)],
                   ),
                 ),
                 heightspace(5),
@@ -90,7 +103,7 @@ class _DoctorRemovalTileState extends State<DoctorRemovalTile> {
                   style: const TextStyle(fontSize: 12, fontFamily: 'Inter'),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

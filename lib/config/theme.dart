@@ -37,10 +37,26 @@ ThemeData lightTheme = ThemeData(
     ),
   ),
 
+  // Button themes
+  elevatedButtonTheme: const ElevatedButtonThemeData(
+    style: ButtonStyle(
+      textStyle: MaterialStatePropertyAll(
+        TextStyle(
+          fontWeight: FontWeight.bold,
+          fontFamily: fontFamily,
+        ),
+      ),
+      backgroundColor: MaterialStatePropertyAll(
+        Color.fromARGB(255, 226, 50, 73),
+      ),
+      foregroundColor: MaterialStatePropertyAll(Colors.white),
+    ),
+  ),
+
   //UI Scheme
   colorScheme: ColorScheme.light(
     //Background
-    background: const Color.fromRGBO(244, 244, 245, 1),
+    background: const Color.fromARGB(255, 235, 235, 235),
     onBackground: Colors.white,
 
     primary: const Color.fromARGB(255, 226, 50, 73),

@@ -13,6 +13,7 @@ class ApproveDoctorsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        titleSpacing: 0,
         scrolledUnderElevation: 0,
         title: const Text('Approve Doctors'),
         bottom: PreferredSize(

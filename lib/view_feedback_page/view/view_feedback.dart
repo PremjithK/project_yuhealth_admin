@@ -12,6 +12,7 @@ class ViewFeedbackPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        titleSpacing: 0,
         scrolledUnderElevation: 0,
         title: const Text('User Feedback'),
         bottom: PreferredSize(

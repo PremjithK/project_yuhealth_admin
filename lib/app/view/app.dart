@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:yu_health_admin/custom_widgets/theme.dart';
+import 'package:yu_health_admin/config/theme.dart';
 import 'package:yu_health_admin/l10n/l10n.dart';
 import 'package:yu_health_admin/login_page/view/login_page.dart';
 

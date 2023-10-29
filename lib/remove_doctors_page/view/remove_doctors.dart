@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yu_health_admin/custom_widgets/doctor_remove_tile.dart';
+import 'package:yu_health_admin/custom_widgets/manage_doctor_tile.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 
 class RemoveDoctorsPage extends StatelessWidget {
@@ -15,6 +15,7 @@ class RemoveDoctorsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        titleSpacing: 0,
         scrolledUnderElevation: 0,
         title: const Text('Manage Doctors'),
         bottom: PreferredSize(

@@ -1,6 +1,6 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:yu_health_admin/config/theme.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 
 class FeedbackCard extends StatelessWidget {
@@ -17,9 +17,11 @@ class FeedbackCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).colorScheme;
     return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
+        border: Border.all(color: theme.primary),
         color: Theme.of(context).colorScheme.onBackground,
         borderRadius: BorderRadius.circular(15),
       ),
@@ -30,7 +32,9 @@ class FeedbackCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const CircleAvatar(),
+              const CircleAvatar(
+                radius: 25,
+              ),
               widthspace(10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,15 +42,15 @@ class FeedbackCard extends StatelessWidget {
                   Text(
                     title,
                     style: const TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: fontFamily,
                       fontSize: 16,
                       fontVariations: [FontVariation('wght', 800)],
                     ),
                   ),
                   Text(
-                    '@ $username',
+                    '@$username',
                     style: const TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: altFontFamily,
                     ),
                   ),
                 ],
@@ -56,16 +60,17 @@ class FeedbackCard extends StatelessWidget {
                 '${DateTime.now().day.toString()}-${DateTime.now().month.toString()}-${DateTime.now().year.toString()}',
                 softWrap: true,
                 style: const TextStyle(
-                  fontSize: 10,
+                  fontSize: 12,
                 ),
               ),
             ],
           ),
-          const Divider(),
+          heightspace(20),
           Text(
             content,
             maxLines: 5,
-            style: const TextStyle(
+            style: TextStyle(
+              color: Colors.black.withOpacity(0.75),
               fontFamily: 'Inter',
               fontSize: 14,
               letterSpacing: 0,

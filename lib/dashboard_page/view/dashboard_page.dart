@@ -26,6 +26,7 @@ class DashboardPage extends StatelessWidget {
             icon: const Icon(Icons.logout),
             label: const Text('Log Out'),
           ),
+          widthspace(15),
         ],
         bottom: PreferredSize(
           preferredSize: const Size(double.infinity, 2),
@@ -41,30 +42,36 @@ class DashboardPage extends StatelessWidget {
         children: [
           heightspace(20),
           ColoredOptionContainer(
-            color: Colors.teal,
             title: 'Approve Doctors',
-            subTitle: 'Accept or Reject doctors enlisting to YuHealth',
-            icon: const Icon(Icons.medical_services),
+            subTitle: 'Accept or Reject doctors joining YuHealth',
+            icon: const Icon(
+              Icons.check,
+              size: 40,
+            ),
             onTap: () {
               Get.to<Widget>(const ApproveDoctorsPage());
             },
           ),
           heightspace(10),
           ColoredOptionContainer(
-            color: Colors.pink,
-            title: 'Remove Doctors',
-            subTitle: 'Remove Doctors Actively Working With YuHealth',
-            icon: const Icon(Icons.close),
+            title: 'Manage Doctors',
+            subTitle: 'Remove or Freeze Doctors Working With YuHealth',
+            icon: const Icon(
+              Icons.manage_accounts,
+              size: 40,
+            ),
             onTap: () => Get.to<Widget>(
               const RemoveDoctorsPage(),
             ),
           ),
           heightspace(10),
           ColoredOptionContainer(
-            color: Colors.blue.shade500,
             title: 'View Feedback',
-            subTitle: 'Read Feedback From Yu Customers',
-            icon: const Icon(Icons.message_outlined),
+            subTitle: 'Read Feedback From YuHealth Customers',
+            icon: const Icon(
+              Icons.message_outlined,
+              size: 40,
+            ),
             onTap: () {
               Get.to<Widget>(const ViewFeedbackPage());
             },
