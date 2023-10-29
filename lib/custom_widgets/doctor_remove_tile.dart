@@ -31,7 +31,7 @@ class DoctorRemovalTile extends StatefulWidget {
   final void Function(BuildContext)? onRemoved;
 
   //Styles
-  double contentRadius = 15;
+  final double contentRadius = 15;
 
   //
   @override

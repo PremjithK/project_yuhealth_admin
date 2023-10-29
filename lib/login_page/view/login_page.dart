@@ -63,7 +63,7 @@ class LoginPage extends StatelessWidget {
                     label: 'Log In',
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        Get.to<Widget>(DashboardPage());
+                        Get.to<Widget>(const DashboardPage());
                       }
                     },
                   ),

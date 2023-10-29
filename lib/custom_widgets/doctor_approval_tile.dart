@@ -3,7 +3,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:yu_health_admin/custom_widgets/spacing.dart';
 
 class DoctorApprovalTile extends StatefulWidget {
-  DoctorApprovalTile({
+  const DoctorApprovalTile({
     required this.name,
     required this.qualification,
     required this.department,
@@ -37,7 +37,7 @@ class DoctorApprovalTile extends StatefulWidget {
   final void Function(BuildContext)? onDetails;
 
   //Styles
-  double contentRadius = 10;
+  final double contentRadius = 10;
 
   //
   @override
