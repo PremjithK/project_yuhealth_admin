@@ -11,7 +11,16 @@ class ViewFeedbackPage extends StatelessWidget {
     // UI
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        scrolledUnderElevation: 0,
         title: const Text('User Feedback'),
+        bottom: PreferredSize(
+          preferredSize: const Size(double.infinity, 2),
+          child: Container(
+            height: 2,
+            color: const Color.fromARGB(255, 226, 50, 73),
+          ),
+        ),
       ),
       backgroundColor: theme.background,
       body: ListView(

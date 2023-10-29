@@ -7,6 +7,7 @@ const String altFontFamily = 'Inter';
 
 ThemeData lightTheme = ThemeData(
   appBarTheme: const AppBarTheme(
+    scrolledUnderElevation: 0,
     titleSpacing: 20,
     titleTextStyle: TextStyle(
         fontFamily: fontFamily,

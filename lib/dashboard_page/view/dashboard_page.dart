@@ -19,7 +19,7 @@ class DashboardPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         scrolledUnderElevation: 0,
         leadingWidth: 10,
-        title: const Text('Yu Admin Console'),
+        title: const Text('Admin Console'),
         actions: [
           ElevatedButton.icon(
             onPressed: () {},
@@ -27,6 +27,13 @@ class DashboardPage extends StatelessWidget {
             label: const Text('Log Out'),
           ),
         ],
+        bottom: PreferredSize(
+          preferredSize: const Size(double.infinity, 2),
+          child: Container(
+            height: 2,
+            color: const Color.fromARGB(255, 226, 50, 73),
+          ),
+        ),
       ),
       backgroundColor: theme.background,
       body: ListView(
